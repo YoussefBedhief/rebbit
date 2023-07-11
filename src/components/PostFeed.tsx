@@ -61,7 +61,7 @@ const PostFeed = ({ subrebbitName, initialPosts }: PostFeedProps) => {
                 subrebbitName={post.subrebbit.name}
                 voteCount={voteCount}
                 currentVote={currentVote}
-              />{" "}
+              />
             </li>
           )
         } else {
