@@ -71,6 +71,9 @@ const CreateCommunityPage = () => {
           <p className="text-xs pb-2">
             Community names including capitalization cannot be changed.
           </p>
+          <p className="text-xs pb-2">
+            The community names must at least be 3 characters
+          </p>
           <div className="relative">
             <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400">
               r/
