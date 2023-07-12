@@ -8,6 +8,7 @@ import axios from "axios"
 import { useSession } from "next-auth/react"
 import { useEffect, useRef } from "react"
 import Post from "./Post"
+import PostLoader from "./PostLoader"
 
 interface PostFeedProps {
   initialPosts: ExtendedPost[]
@@ -85,6 +86,11 @@ const PostFeed = ({ subrebbitName, initialPosts }: PostFeedProps) => {
           )
         }
       })}
+      {isFetchingNextPage && (
+        <li>
+          <PostLoader />
+        </li>
+      )}
     </ul>
   )
 }
