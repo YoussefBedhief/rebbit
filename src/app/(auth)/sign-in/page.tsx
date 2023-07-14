@@ -4,6 +4,11 @@ import { cn } from "@/lib/utils"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 
+export const metadata = {
+  title: "Rebbit | SingnIn",
+  description:
+    "Signing in with your google account to use the full potiential of this application",
+}
 const SignInPage = () => {
   return (
     <div className="absolute inset-0">

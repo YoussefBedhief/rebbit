@@ -38,7 +38,7 @@ const SearchBar = () => {
 
   const request = debounce(async () => {
     await refetch()
-  })
+  }, 500)
 
   const debounceRequest = useCallback(() => {
     request()

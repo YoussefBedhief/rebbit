@@ -4,6 +4,11 @@ import { cn } from "@/lib/utils"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 
+export const metadata = {
+  title: "Rebbit | SingnUp",
+  description: "Registeration page to Rebbit ",
+}
+
 const SignUpPage = () => {
   return (
     <div className="absolute inset-0">

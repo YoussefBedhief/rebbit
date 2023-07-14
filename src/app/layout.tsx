@@ -9,7 +9,7 @@ import { Inter } from "next/font/google"
 
 export const metadata = {
   title: "Rebbit",
-  description: "A Reddit clone built with Next.js and TypeScript.",
+  description: "A Reddit clone built with Next.js, TypeScript and Prisma.",
 }
 
 const inter = Inter({ subsets: ["latin"] })
