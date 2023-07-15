@@ -50,7 +50,7 @@ const PostFeed = ({ subrebbitName, initialPosts }: PostFeedProps) => {
 
   return (
     <ul className="flex flex-col col-span-2 space-y-6">
-      {posts.map((post, index) => {
+      {posts?.map((post, index) => {
         const voteCount = post.votes.reduce((sum, vote) => {
           if (vote.type === "UP") return sum + 1
           if (vote.type === "DOWN") return sum - 1

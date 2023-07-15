@@ -16,7 +16,7 @@ export async function GET(req: Request) {
       },
       include: { subrebbit: true },
     })
-    followedCommunitiesIds = followedCommunities.map((sub) => sub.subrebbit.id)
+    followedCommunitiesIds = followedCommunities?.map((sub) => sub.subrebbit.id)
   }
 
   try {

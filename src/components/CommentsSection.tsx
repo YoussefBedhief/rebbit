@@ -38,7 +38,7 @@ const CommentsSection = async ({ postId, replyToId }: CommentsSectionProps) => {
       <div className="flex flex-col gap-y-6 mt-4">
         {comments
           .filter((comment) => !comment.replyToId)
-          .map((topLevelComment) => {
+          ?.map((topLevelComment) => {
             const topLevelCommentVotesAmt = topLevelComment.votes.reduce(
               (acc, vote) => {
                 if (vote.type === "UP") return acc + 1
@@ -65,7 +65,7 @@ const CommentsSection = async ({ postId, replyToId }: CommentsSectionProps) => {
                 {/* Render replies */}
                 {topLevelComment.replies
                   .sort((a, b) => b.votes.length - a.votes.length) // Sort replies by most liked
-                  .map((reply) => {
+                  ?.map((reply) => {
                     const replyVotesAmt = reply.votes.reduce((acc, vote) => {
                       if (vote.type === "UP") return acc + 1
                       if (vote.type === "DOWN") return acc - 1

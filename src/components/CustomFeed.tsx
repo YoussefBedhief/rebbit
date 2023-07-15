@@ -28,7 +28,7 @@ const CustomFeed = async () => {
     where: {
       subrebbit: {
         name: {
-          in: followedCommunities.map(({ subrebbit }) => subrebbit.name),
+          in: followedCommunities?.map(({ subrebbit }) => subrebbit.name),
         },
       },
     },
