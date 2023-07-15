@@ -114,6 +114,8 @@ model Comment {
 
   votes     CommentVote[]
   commentId String?
+
+  @@index([postId])
 }
 
 model Vote {

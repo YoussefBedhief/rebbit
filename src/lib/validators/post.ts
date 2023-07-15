@@ -10,3 +10,8 @@ export const PostValidator = z.object({
 })
 
 export type PostCreationRequest = z.infer<typeof PostValidator>
+
+export const DeletePostValidator = z.object({
+  id: z.string(),
+})
+export type PostDeleteRequest = z.infer<typeof DeletePostValidator>
