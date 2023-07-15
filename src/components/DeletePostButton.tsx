@@ -6,6 +6,17 @@ import { useMutation } from "@tanstack/react-query"
 import axios, { AxiosError } from "axios"
 import { toast } from "@/hooks/use-toast"
 import { usePathname, useRouter } from "next/navigation"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "./ui/Alert-dialog"
 
 interface DeletePostButtonProps {
   postId: string
@@ -62,15 +73,34 @@ const DeletePostButton = ({ postId }: DeletePostButtonProps) => {
 
   return (
     <div>
-      <Button
-        variant={"delete"}
-        onClick={() => {
-          deletePost()
-        }}
-        isLoading={isLoading}
-      >
-        <Trash2 className="w-5 h-5 text-red-500" />
-      </Button>
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button
+            variant={"delete"}
+            onClick={() => {
+              deletePost()
+            }}
+            isLoading={isLoading}
+          >
+            <Trash2 className="w-5 h-5 text-red-500" />
+          </Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>
+              Are you sure you want to delete this post?
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete your
+              post and remove the post data from our servers.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction>Continue</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   )
 }

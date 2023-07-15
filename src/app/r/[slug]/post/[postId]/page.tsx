@@ -73,7 +73,9 @@ const PostDetailsPage = async ({ params }: PostDetailsPageProps) => {
                 new Date(post?.createdAt ?? cachedPost.createdAt)
               )}
             </p>
-            {session && session.user.id === post?.author.id ? (
+            {session &&
+            (session.user.id === post?.author.id ||
+              session.user.id === cachedPost.authorId) ? (
               <DeletePostButton postId={params.postId} />
             ) : null}
           </div>
