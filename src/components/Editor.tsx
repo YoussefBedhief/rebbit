@@ -75,7 +75,6 @@ const Editor = ({ subrebbitId }: EditorProps) => {
     const Warning = (await import("@editorjs/warning")).default
     const Quote = (await import("@editorjs/quote")).default
     const Embed = (await import("@editorjs/embed")).default
-    const Table = (await import("@editorjs/table")).default
     const Code = (await import("@editorjs/code")).default
     const RawTool = (await import("@editorjs/raw")).default
     const Marker = (await import("@editorjs/marker")).default
@@ -121,11 +120,6 @@ const Editor = ({ subrebbitId }: EditorProps) => {
             class: List,
             shortcut: "SHIFT+L",
             inlineToolbar: true,
-          },
-          table: {
-            class: Table,
-            inlineToolbar: true,
-            shortcut: "SHIFT+T",
           },
           embed: {
             class: Embed,
