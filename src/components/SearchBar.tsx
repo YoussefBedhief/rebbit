@@ -9,16 +9,19 @@ import {
   CommandItem,
   CommandList,
 } from "./ui/Command"
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import axios from "axios"
 import { Prisma, Subrebbit } from "@prisma/client"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { Users } from "lucide-react"
 import debounce from "lodash.debounce"
+import { useOnClickOutside } from "@/hooks/use-on-click-outside"
 
 const SearchBar = () => {
   const [input, setInput] = useState<string>("")
   const router = useRouter()
+  const CommandRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
   const {
     data: queryResults,
     refetch,
@@ -44,8 +47,19 @@ const SearchBar = () => {
     request()
   }, [])
 
+  useOnClickOutside(CommandRef, () => {
+    setInput("")
+  })
+
+  useEffect(() => {
+    setInput("")
+  }, [pathname])
+
   return (
-    <Command className="relative rounded-lg border max-w-lg z-50 overflow-visible">
+    <Command
+      ref={CommandRef}
+      className="relative rounded-lg border max-w-lg z-50 overflow-visible"
+    >
       <CommandInput
         className="outline-none border-none ring-0 focus:outline-none focus:border-none "
         placeholder="search for community ..."
