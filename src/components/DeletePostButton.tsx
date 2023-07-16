@@ -75,13 +75,7 @@ const DeletePostButton = ({ postId }: DeletePostButtonProps) => {
     <div>
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button
-            variant={"delete"}
-            onClick={() => {
-              deletePost()
-            }}
-            isLoading={isLoading}
-          >
+          <Button variant={"delete"} isLoading={isLoading}>
             <Trash2 className="w-5 h-5 text-red-500" />
           </Button>
         </AlertDialogTrigger>
@@ -97,7 +91,13 @@ const DeletePostButton = ({ postId }: DeletePostButtonProps) => {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
+            <AlertDialogAction
+              onClick={() => {
+                deletePost()
+              }}
+            >
+              Continue
+            </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
