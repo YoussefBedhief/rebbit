@@ -75,7 +75,7 @@ const PostDetailsPage = async ({ params }: PostDetailsPageProps) => {
             </p>
             {session &&
             (session.user.id === post?.author.id ||
-              session.user.id === cachedPost.authorId) ? (
+              session.user.id === cachedPost?.authorId) ? (
               <DeletePostButton postId={params.postId} />
             ) : null}
           </div>
