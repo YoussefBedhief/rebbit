@@ -30,7 +30,7 @@ export async function DELETE(
       })
     }
 
-    //Delete the comment reply first of this post
+    //First delete the comment reply of this post
     for (const comment of postExists.comments) {
       await db.comment.deleteMany({
         where: {
@@ -39,7 +39,7 @@ export async function DELETE(
       })
     }
 
-    // delete the comment of this post
+    //Second delete the comment of this post
     await db.comment.deleteMany({
       where: {
         postId: id,
