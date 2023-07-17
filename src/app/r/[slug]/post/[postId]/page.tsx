@@ -65,9 +65,9 @@ const PostDetailsPage = async ({ params }: PostDetailsPageProps) => {
           />
         </Suspense>
 
-        <div className="sm:w-0 w-full flex-1 bg-white p-4 rounded-sm">
+        <div className="sm:w-0 w-full flex-1 bg-white dark:bg-gray-800 p-4 rounded-sm">
           <div className="flex justify-between">
-            <p className="max-h-40 mt-1 truncate text-xs text-gray-500">
+            <p className="max-h-40 mt-1 truncate text-xs text-gray-500 dark:text-gray-300">
               Posted by u/{post?.author.username ?? cachedPost.authorUsername}{" "}
               {formatTimeToNow(
                 new Date(post?.createdAt ?? cachedPost.createdAt)
@@ -79,14 +79,14 @@ const PostDetailsPage = async ({ params }: PostDetailsPageProps) => {
               <DeletePostButton postId={params.postId} />
             ) : null}
           </div>
-          <h1 className="text-xl font-semibold py-2 leading-6 text-gray-900">
+          <h1 className="text-xl font-semibold py-2 leading-6 text-gray-900 dark:text-white">
             {post?.title ?? cachedPost.title}
           </h1>
 
           <EditorOutput content={post?.content ?? cachedPost.content} />
           <Suspense
             fallback={
-              <Loader2 className="h-5 w-5 animate-spin text-zinc-500" />
+              <Loader2 className="h-5 w-5 animate-spin text-zinc-500 dark:text-zinc-300" />
             }
           >
             {/* @ts-expect-error Server Component */}

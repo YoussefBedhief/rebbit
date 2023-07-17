@@ -27,7 +27,7 @@ const UserAccountNav = ({ user }: UserAccountNavProps) => {
           }}
           className="w-8 h-8"
         />
-        <DropdownMenuContent className="bg-white " align="end">
+        <DropdownMenuContent align="end">
           <div className="flex justify-start items-center gap-2 p-2">
             <div className="flex flex-col space-y-1 leading-none">
               {user.name && <p className="font-medium">{user.name}</p>}

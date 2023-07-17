@@ -31,7 +31,7 @@ const Post: FC<PostProps> = ({
   const pRef = useRef<HTMLParagraphElement>(null)
 
   return (
-    <div className="rounded-md bg-white shadow">
+    <div className="rounded-md bg-white shadow dark:bg-gray-800">
       <div className="px-6 py-4 flex justify-between">
         <PostVoteClient
           postId={post.id}
@@ -40,11 +40,11 @@ const Post: FC<PostProps> = ({
         />
 
         <div className="w-0 flex-1">
-          <div className="max-h-40 mt-1 text-xs text-gray-500">
+          <div className="max-h-40 mt-1 text-xs text-gray-500 dark:text-gray-400">
             {subrebbitName ? (
               <>
                 <a
-                  className="underline text-zinc-900 text-sm underline-offset-2"
+                  className="underline text-zinc-900 dark:text-emerald-400 text-sm underline-offset-2"
                   href={`/r/${subrebbitName}`}
                 >
                   r/{subrebbitName}
@@ -56,7 +56,7 @@ const Post: FC<PostProps> = ({
             {formatTimeToNow(new Date(post.createdAt))}
           </div>
           <a href={`/r/${subrebbitName}/post/${post.id}`}>
-            <h1 className="text-lg font-semibold py-2 leading-6 text-gray-900">
+            <h1 className="text-lg font-semibold py-2 leading-6 text-gray-900 dark:text-white">
               {post.title}
             </h1>
           </a>
@@ -70,13 +70,13 @@ const Post: FC<PostProps> = ({
             </a>
             {pRef.current?.clientHeight === 160 ? (
               // blur bottom if content is too long
-              <div className="absolute bottom-0 left-0 h-24 w-full bg-gradient-to-t from-white to-transparent"></div>
+              <div className="absolute bottom-0 left-0 h-24 w-full bg-gradient-to-t from-white to-transparent  dark:from-gray-800 dark:to-transparent"></div>
             ) : null}
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-50 z-20 text-sm px-4 py-4 sm:px-6">
+      <div className="bg-gray-50 dark:bg-gray-700 z-20 text-sm px-4 py-4 sm:px-6">
         <Link
           href={`/r/${subrebbitName}/post/${post.id}`}
           className="w-fit flex items-center gap-2"

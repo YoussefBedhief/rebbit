@@ -50,28 +50,32 @@ const Layout = async ({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-4 py-6">
           <div className="flex flex-col col-span-2 space-y-6">{children}</div>
           {/*Info sideBar  */}
-          <div className="overflow-hidden h-fit rounded-lg border border-gray-200 order-first md:order-last">
+          <div className="overflow-hidden h-fit rounded-lg border border-gray-200 order-first md:order-last dark:border-gray-700">
             <div className="px-6 py-4">
-              <p className="font-semibold py-3">About r/{subrebbit.name}</p>
+              <p className="font-semibold py-3 dark:text-white">
+                About r/{subrebbit.name}
+              </p>
             </div>
-            <dl className="divide-y divide-gray-100 px-6 py-4 text-sm leading-6 bg-white">
+            <dl className="divide-y divide-gray-100 px-6 py-4 text-sm leading-6 bg-white dark:bg-gray-800">
               <div className="flex justify-between gap-x-4 py-3">
-                <dt className="text-gray-500">Created</dt>
-                <dd className="text-gray-700">
+                <dt className="text-gray-500 dark:text-gray-400">Created</dt>
+                <dd className="text-gray-700 dark:text-gray-300">
                   <time dateTime={subrebbit.createdAt.toDateString()}>
                     {format(subrebbit.createdAt, "MMMM d, yyyy")}
                   </time>
                 </dd>
               </div>
               <div className="flex justify-between gap-x-4 py-3">
-                <dt className="text-gray-500">Members</dt>
+                <dt className="text-gray-500 dark:text-gray-400">Members</dt>
                 <dd className="flex items-start gap-x-2">
-                  <div className="text-gray-900">{memberCount}</div>
+                  <div className="text-gray-900 dark:text-gray-100">
+                    {memberCount}
+                  </div>
                 </dd>
               </div>
               {subrebbit.creatorId === session?.user?.id ? (
                 <div className="flex justify-between gap-x-4 py-3">
-                  <dt className="text-gray-500">
+                  <dt className="text-gray-500 dark:text-gray-400">
                     You are the creator of this community
                   </dt>
                 </div>

@@ -212,7 +212,7 @@ const Editor = ({ subrebbitId }: EditorProps) => {
   const { ref: refTitle, ...rest } = register("title")
 
   return (
-    <div className="w-full bg-zinc-50 border-zinc-200 border p-4">
+    <div className="w-full bg-zinc-50 dark:bg-gray-800 border-zinc-200 dark:border-gray-700 border p-4">
       <form
         id="subrebbit-post-form"
         className="w-fit"
@@ -228,9 +228,9 @@ const Editor = ({ subrebbitId }: EditorProps) => {
             }}
             {...rest}
             placeholder="Title"
-            className="w-full resize-none overflow-hidden appearance-none bg-transparent text-5xl font-bold focus:outline-none"
+            className="w-full resize-none overflow-hidden appearance-none bg-transparent text-5xl font-bold focus:outline-none text-zinc-900 dark:text-white"
           />
-          <div id="editor" className="min-h-[500px] " />
+          <div id="editor" className="min-h-[500px] dark:text-white" />
         </div>
       </form>
     </div>

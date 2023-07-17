@@ -59,12 +59,12 @@ const CreateCommunityPage = () => {
 
   return (
     <div className="container flex items-center h-full max-w-3xl mx-auto">
-      <div className="relative bg-white w-full h-fit p-4 rounded-lg space-y-6">
+      <div className="relative bg-white dark:bg-gray-800 w-full h-fit p-4 rounded-lg space-y-6">
         <div className="flex justify-between items-center">
           <h1 className="text-xl font-semibold">Create a Community</h1>
         </div>
 
-        <hr className="bg-red-500 h-px" />
+        <hr className="bg-red-500 dark:bg-red-500 h-px" />
 
         <div>
           <p className="text-lg font-medium">Name</p>
@@ -72,10 +72,10 @@ const CreateCommunityPage = () => {
             Community names including capitalization cannot be changed.
           </p>
           <p className="text-xs pb-2">
-            The community names must at least be 3 characters
+            The community names must be at least 3 characters.
           </p>
           <div className="relative">
-            <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400">
+            <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400 dark:text-emerald-400">
               r/
             </p>
             <Input
