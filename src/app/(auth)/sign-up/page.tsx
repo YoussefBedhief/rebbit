@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export const metadata = {
   title: "Rebbit | SingnUp",
-  description: "Registeration page to Rebbit ",
+  description: "Registration page to Rebbit ",
 }
 
 const SignUpPage = () => {

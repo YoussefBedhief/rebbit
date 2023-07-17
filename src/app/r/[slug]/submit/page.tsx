@@ -4,6 +4,10 @@ import { db } from "@/lib/db"
 import { notFound } from "next/navigation"
 import React from "react"
 
+export const metadata = {
+  title: "Rebbit | Create post",
+  description: "Manage account and website settings",
+}
 interface CreatingPostPageProps {
   params: {
     slug: string

@@ -6,6 +6,13 @@ import { db } from "@/lib/db"
 import { notFound } from "next/navigation"
 import React from "react"
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}) {
+  return { title: `Rebbit | r/${params.slug}` }
+}
 interface SubrebbitDetailsPageProps {
   params: {
     slug: string

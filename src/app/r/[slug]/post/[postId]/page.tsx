@@ -13,6 +13,18 @@ import { ArrowBigDown, ArrowBigUp, Loader2 } from "lucide-react"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { postId: string }
+}) {
+  const post = await db.post.findFirst({
+    where: { id: params.postId },
+  })
+
+  return { title: `Rebbit | ${post?.title}` }
+}
+
 interface PostDetailsPageProps {
   params: {
     postId: string
