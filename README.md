@@ -16,13 +16,24 @@ This project is a reddit clone with Nextjs 13, TypeScript and Prisma and which i
 - and much more feature ...
 
 ## Screenshots
-![image](https://github.com/YoussefBedhief/realTime-chat/assets/69478528/574080f9-8e3a-42d0-9bf5-921bad057787)
-![image](https://github.com/YoussefBedhief/realTime-chat/assets/69478528/8c0dbe09-3e08-427e-a2ea-1c9288f78b17)
-![image](https://github.com/YoussefBedhief/realTime-chat/assets/69478528/ff1ad568-c88d-4a6d-a5a2-447ee956fa7a)
-![image](https://github.com/YoussefBedhief/realTime-chat/assets/69478528/f4df39fa-1097-43df-a3dd-840a59d95941)
+![image](https://github.com/YoussefBedhief/rebbit/assets/69478528/4b11d8d0-c1b2-4514-9c76-c9564263f498)
+![image](https://github.com/YoussefBedhief/rebbit/assets/69478528/b4db19da-8e08-4402-968e-3bf5e91ac588)
+
+![image](https://github.com/YoussefBedhief/rebbit/assets/69478528/cb3c748e-bd0a-4f2c-8b5c-0a2abd34f396)
+![image](https://github.com/YoussefBedhief/rebbit/assets/69478528/7c8eb013-f7d0-469c-9317-219262787830)
+
+![image](https://github.com/YoussefBedhief/rebbit/assets/69478528/2638bf3f-4799-4283-b7f4-de65b24008cc)
+
+![image](https://github.com/YoussefBedhief/rebbit/assets/69478528/0e74014c-8fed-4082-93c7-f1c089d91cad)
+![image](https://github.com/YoussefBedhief/rebbit/assets/69478528/efa1133f-ff55-44bf-b2b2-78d1a8112641)
+
+
+
+
+
 
 ## Technologies used
-<a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a><a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/></a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a><a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a><a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/> </a<a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://github.com/YoussefBedhief/rebbit/assets/69478528/9a7198a1-4b47-4d16-b236-af9bcfb28c8b" alt="redis" width="40" height="40"/> </a>
+<a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a><a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/></a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a><a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a><a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/> </a><a href="https://www.prisma.io/" target="_blank" rel="noreferrer"> <img src="https://github.com/YoussefBedhief/rebbit/assets/69478528/9a7198a1-4b47-4d16-b236-af9bcfb28c8b" alt="redis" width="40" height="40"/> </a>
 
 
 ## Clone the project
@@ -84,16 +95,16 @@ To run this project, you will need to add the following environment variables to
 
 `NEXTAUTH_SECRET`
 
-`UPSTASH_REDIS_REST_URL`
+`REDIS_URL`
 
-`UPSTASH_REDIS_REST_TOKEN`
+`REDIS_SECRET`
 
 `GOOGLE_CLIENT_ID`
 
 `GOOGLE_CLIENT_SECRET`
 
-`PUSHER_APP_ID`
+`DATABASE_URL`
 
-`NEXT_PUBLIC_PUSHER_APP_KEY`
+`UPLOADTHING_SECRET`
 
-`PUSHER_APP_SECRET`
+`UPLOADTHING_APP_ID`
